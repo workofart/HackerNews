@@ -24,6 +24,15 @@ var/
 .installed.cfg
 *.egg
 
+# datasets
+dataAnalysis/corpus
+dataAnalysis/data
+dataMining/data
+dataMining/combined.json
+dataMining/combined_part2.json
+dataMining/part_0.json
+dataMining/combined.json
+
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
