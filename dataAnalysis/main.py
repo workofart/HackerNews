@@ -1,194 +1,148 @@
-import _pickle, json, pprint, requests, numpy, scipy, nltk, path, pathlib, html, os
+import numpy as np
+from numpy import isnan
+import pandas as pd
+from sklearn import preprocessing
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.pipeline import Pipeline
+from textblob import TextBlob
+from textblob.classifiers import NaiveBayesClassifier
+import json, csv
+from json.decoder import JSONDecodeError
+dirPath = 'D:\\Github\\HackerNews\\dataAnalysis\\data\\'
+filePath = dirPath + 'RC_2011-01'
+subredditsFile = dirPath + 'subReddits.csv'
+textFile = dirPath + 'fullText.csv'
 
-from nltk.corpus import brown
+def statusUpdate(interval, i, total):
+    if (i % interval == 0):
+        progress = (i / total) * 100
+        print ("\n \n Processing Story %d of %d (%.2f)%% \n \n" % (i, total, progress))
 
-# Global Vars
+def exportSubReddits():
+    subreddits = dict()
+    with open(filePath, 'r') as f:
+        for line in f:
+            try:
+                obj = json.loads(line)
+            except JSONDecodeError:
+                print('Error reading: ' + line)
+            subreddit = obj['subreddit']
+            text = obj['body']
+            # blob = TextBlob(text)
+            # for x in blob.words:
+            #     print(x)
+            if subreddit in subreddits:
+                subreddits[subreddit] += 1
+            else:
+                subreddits[subreddit] = 1
 
+    sortedSubreddits = sorted(subreddits, key=subreddits.get, reverse=True)
+    # for w in sortedSubreddits[0:30]:
+    #     print(w, subreddits[w])
 
-def getWordFreq(story):
-    wordFreq = []
-    return wordFreq
+    with open(csvFile, 'w') as f:
+        for w in sortedSubreddits:
+            f.write(w + ',' + str(subreddits[w]) + '\n')
 
+def getSubReddit():
+    # Read from csv to get list of subreddits
+    with open(subredditsFile, 'r') as f:
+        reader = csv.reader(f)
+        temp = []
+        for row in reader:
+            temp.append(row[0])
+    return temp
 
-def htmlPrint(text):
-    print(html.unescape(text))
+def getText(interval):
+    subreddits = getSubReddit()
+    print('Subreddits: \n', subreddits)
+    storage = dict()
+    with open(filePath, 'r') as f:
+        # totalLines = sum(1 for row in f)
+        # f.seek(0)
+        # i = 0
+        for line in f:
+            # statusUpdate(interval, i, totalLines)
+            # i += 1
+            try:
+                obj = json.loads(line)
+            except JSONDecodeError:
+                print('Error reading: ' + line)
+            subreddit = obj['subreddit']
+            text = obj['body']
+            # if item is in the selected subreddits, store the object
+            if subreddit in subreddits:
+                if subreddit not in storage:
+                    print('Creating key slot: ', subreddit)
+                    storage[subreddit] = []
+                if text != '[deleted]':
+                    storage[subreddit].append(text)
+    # print(json.dumps(storage))
 
-def rankByScores(stories):
-    stories = sorted(stories, key='score')
-    return stories
-
-# Read the list of files and does processing on each file read
-def readFiles(dirName):
-    n = 10  # top comments with more than N kids
-
-    # get file list from directory
-    p = pathlib.Path(dirName)
-    files = p.iterdir()
-
-    parentStories = []
-    for root, subdirs, files in os.walk(dirName):
-        parentRoot = root
-        print("Root: " + root)
-
-        for subdir in subdirs:
-            print('\t- subdir ' + subdir)
-
-        for filename in files:
-            topComments = []
-            file_path = os.path.join(root, filename)
-
-            outFile = os.path.join('..\\dataMining\\data', 'topComments', filename.rstrip('.json') + '.json')
-            # print('\t\t- file %s \n\t\t- outputFile %s' % (file_path, outFile))
-
-            with open(file_path) as f:
-                # data = []
-                # for line in f:
-                #     data.append(json.load(line))
-                # print(dir(f));
+    with open(textFile, 'w') as f:
+        # json.dump(storage, f)
+        for key in storage.keys():
+            for text in storage[key]:
+                text = text.replace('\n', ' ').replace(',', ' ').replace('\r', ' ')
                 try:
-                    data = json.load(f)
-                except ValueError:
-                    print('Decoding error for ' + f.name)
-                # Extract the parent story/ask and store them into a list
-                parentStories.append(extractParentStory(data))
-                getTopComments(data, n, topComments)
-
-                print('There are %s top comments for the file %s' % (len(topComments), f.name))
-                with open(outFile, 'w') as out:
-                    json.dump(topComments, out, indent=4)
-
-                buildCorpus(data, topComments);
-    # sortedScore_parentStories = sortByX(parentStories, 'score')
-
-    # Get the top N stories by a certain dimension
-    # pprint.pprint(getTopNStories(sortedScore_parentStories, 1))
-
-def readFile(file):
-    with open(str(file)+'.json', 'r') as f:
-        data = json.load(f)
-        topComments = getTopComments(data)
-        print(topComments)
-
-# Function that will sort a list of custom objects by the key 'X'
-def sortByX(list, X):
-    return sorted(list, key=lambda k: k[X], reverse=True)
-
-def extractParentStory(data):
-    story = {}
-    if 'title' in data:
-        story['title'] = data['title']
-    if 'score' in data:
-        story['score'] = data['score']
-    if 'descendants' in data:
-        story['descendants'] = data['descendants']
-    if 'id' in data:
-        story['id'] = data['id']
-    if 'url' in data:
-        story['url'] = data['url']
-    # if 'by' in data:
-        # story['by'] = data['by']
-    # if 'time' in data:
-    #     story['time'] = data['time']
-    # if 'type' in data:
-    #     story['type'] = data['type']
-    # if 'text' in data:
-        # story['text'] = data['text']
-    return story
-
-def getTopNStories(list, n):
-    return list[:n]
-
-# Filter through all the first level comments that don't have kids
-# Return a list of nodes that don't contain 'useless' comments
-def cleanNoKidComments(data):
-    if 'kids' in data:
-        kids = data['kids']
-        # loop through all the kids
-        for kid in kids:
-            # if 'kids' in kid and len(kid['kids']) == 0:
-            if 'kids' in kid and len(kid['kids']) == 1:
-                print(kid['kids'])
-                # htmlPrint(kid['text'])
-    return data
+                    f.write(text + ',' + key + '\n')
+                    # print('key: ', key)
+                    # print('val: ', text)
+                except UnicodeEncodeError:
+                    print('Can\'t encode')
 
 
-# Each comment has its own children, and by counting them we can see
-# the popularity of each comment, and apply sort/filter
-def getTopComments(data, n, topComments):
-    # reached the leaf child
-    if 'kids' not in data:
-        # data['decendents'] = 0
-        return 0
-    else:
-        # reset the decendents for the current node
-        kids = data['kids']
-        if (kids is not None and len(kids) > 0):
-            decendents = 0
-            for kid in kids:
-                kid['decendents'] = getTopComments(kid, n, topComments)
-                if kid['decendents'] != None:
-                    decendents = decendents + kid['decendents'] + 1
+def classify(input):
+    with open(textFile, 'r') as f:
+        classifier = NaiveBayesClassifier(f, format='csv')
+    return classifier.classify(input)
 
-                    # Print out the comments with children > n
-                    if (kid['decendents'] > n):
-                        tmpObj = {}
-                        tmpObj['id'] = kid['id']
-                        tmpObj['text'] = html.unescape(str(kid['text']))
-                        tmpObj['decendents'] = kid['decendents']
-                        topComments.append(tmpObj)
-            if (kid['type'] == 'story'):
-                print()
-                print('Story children: ' + htmlPrint(str(kid['decendents'])))
-            return decendents
+# Randomly shuffles the dataset and pick out 30% as training set, 30% as testing set
+def preprocess():
+    df = pd.read_csv(textFile, encoding='ISO-8859-1')
+    print(df.shape)
+    df.columns = ['text', 'label']
+    df = df.astype('U')
+    train, test = train_test_split(df, train_size=0.7, test_size=0.3)
+
+    train_text = [f for f in train['text']]
+    test_text = [f for f in test['text']]
+
+    le = preprocessing.LabelEncoder()
+    le.fit(train['label'])
+    train_label = le.transform(train['label'])
+
+    le.fit(test['label'])
+    test_label = le.transform(test['label'])
+    # train = [tuple(x) for x in train[['text', 'label']].values]
+    # test = [tuple(x) for x in test[['text', 'label']].values]
+    return train_text, train_label, test_text, test_label
+
+
+# getText(10000)
+# print(classify('This sentence contains guns'))
+train_text, train_label, test_text, test_label = preprocess()
+
+print('Size of training set: ', len(train_text))
+
+
+print('Size of testing set: ', len(test_text))
+
+
+text_clf = Pipeline([('vect', CountVectorizer()),
+                     ('tfidf', TfidfTransformer()),
+                     ('clf', MultinomialNB())])
+
+text_clf = text_clf.fit(train_text, train_label)
+
+
+predicted = text_clf.predict(test_text)
+print(np.mean(predicted == test_label))
 
 
 
-def buildCorpus(data):
-    title = data['title'];
-
-    print('=========== ' + title + '===========');
-
-    # cleanNoKidComments(data);
-    # traverse the tree and keep the text of each comment
-    getCommentText(data, 0)
-
-
-def getCommentText(node, depth):
-
-    # check if the current node has text and only print if it has depth of 1
-    if 'text' in node:
-        comment = node['text']
-        tabs = ''
-        for x in range(0, depth):
-            tabs += '\t'
-        comment = tabs + comment
-        print()
-        print('Comment: ' + htmlPrint(comment))
-
-    if 'kids' in node:
-        kids = node['kids']
-        if (kids is not None and len(kids) > 0):
-            for kid in kids:
-                getCommentText(kid, depth + 1)
-    # reached the leaf child
-    else:
-        print()
-
-def movie_features():
-    print(brown.categories())
-    selectedCategories = ['news', 'fiction', 'reviews'];
-    modals = ['startup', 'technology']
-    cfd = nltk.ConditionalFreqDist((genre, word)
-                                   for genre in brown.categories()
-                                   for word in brown.words(categories=genre))
-    cfd.tabulate(conditions=selectedCategories, samples=modals)
-
-
-item = '13123136'
-readFiles('..\\dataMining\\data')
-# readFile('../dataMining/data/top_stories_20170101/13274871')
-# nltk.download()
-# movie_features()
 
 
 
