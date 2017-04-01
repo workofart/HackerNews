@@ -28,10 +28,10 @@ var/
 dataAnalysis/corpus
 dataAnalysis/data
 dataMining/data
-dataMining/combined.json
-dataMining/combined_part2.json
-dataMining/part_0.json
-dataMining/combined.json
+dataMining/*.json
+data.txt
+dataAnalysis/test.csv
+notes.txt
 
 # Pycharm
 .idea/
@@ -99,3 +99,4 @@ ENV/
 
 # Rope project settings
 .ropeproject
+

@@ -1,151 +1,105 @@
-import numpy as np
-from numpy import isnan
-import pandas as pd
-from sklearn import preprocessing
-from sklearn.model_selection import train_test_split
+##### Standard Imports ######
+from time import time
+import string, nltk
+
+from nltk.stem.snowball import EnglishStemmer
+from nltk import word_tokenize
+
+######　Scikit Learn ######
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
-from textblob import TextBlob
-from textblob.classifiers import NaiveBayesClassifier
-import json, csv
-from json.decoder import JSONDecodeError
-dirPath = 'D:\\Github\\HackerNews\\dataAnalysis\\data\\'
-filePath = dirPath + 'RC_2011-01'
-subredditsFile = dirPath + 'subReddits.csv'
-textFile = dirPath + 'fullText.csv'
+from sklearn.linear_model import SGDClassifier
 
-def statusUpdate(interval, i, total):
-    if (i % interval == 0):
-        progress = (i / total) * 100
-        print ("\n \n Processing Story %d of %d (%.2f)%% \n \n" % (i, total, progress))
+###### Numpy ######
+import numpy as np
 
-def exportSubReddits():
-    subreddits = dict()
-    with open(filePath, 'r') as f:
-        for line in f:
-            try:
-                obj = json.loads(line)
-            except JSONDecodeError:
-                print('Error reading: ' + line)
-            subreddit = obj['subreddit']
-            text = obj['body']
-            # blob = TextBlob(text)
-            # for x in blob.words:
-            #     print(x)
-            if subreddit in subreddits:
-                subreddits[subreddit] += 1
-            else:
-                subreddits[subreddit] = 1
+###### Pandas ######
+import pandas as pd
 
-    sortedSubreddits = sorted(subreddits, key=subreddits.get, reverse=True)
-    # for w in sortedSubreddits[0:30]:
-    #     print(w, subreddits[w])
+###### MatPlotLib ######
+import matplotlib.pyplot as plt
 
-    with open(csvFile, 'w') as f:
-        for w in sortedSubreddits:
-            f.write(w + ',' + str(subreddits[w]) + '\n')
-
-def getSubReddit():
-    # Read from csv to get list of subreddits
-    with open(subredditsFile, 'r') as f:
-        reader = csv.reader(f)
-        temp = []
-        for row in reader:
-            temp.append(row[0])
-    return temp
-
-def getText(interval):
-    subreddits = getSubReddit()
-    print('Subreddits: \n', subreddits)
-    storage = dict()
-    with open(filePath, 'r') as f:
-        # totalLines = sum(1 for row in f)
-        # f.seek(0)
-        # i = 0
-        for line in f:
-            # statusUpdate(interval, i, totalLines)
-            # i += 1
-            try:
-                obj = json.loads(line)
-            except JSONDecodeError:
-                print('Error reading: ' + line)
-            subreddit = obj['subreddit']
-            text = obj['body']
-            # if item is in the selected subreddits, store the object
-            if subreddit in subreddits:
-                if subreddit not in storage:
-                    print('Creating key slot: ', subreddit)
-                    storage[subreddit] = []
-                if text != '[deleted]':
-                    storage[subreddit].append(text)
-    # print(json.dumps(storage))
-
-    with open(textFile, 'w') as f:
-        # json.dump(storage, f)
-        for key in storage.keys():
-            for text in storage[key]:
-                text = text.replace('\n', ' ').replace(',', ' ').replace('\r', ' ')
-                try:
-                    f.write(text + ',' + key + '\n')
-                    # print('key: ', key)
-                    # print('val: ', text)
-                except UnicodeEncodeError:
-                    print('Can\'t encode')
+###### Preprocess ######
+from dataAnalysis.preprocess import preprocess, getTopNAccuracy
 
 
-def classify(input):
-    with open(textFile, 'r') as f:
-        classifier = NaiveBayesClassifier(f, format='csv')
-    return classifier.classify(input)
 
-# Randomly shuffles the dataset and pick out 30% as training set, 30% as testing set
-def preprocess():
-    df = pd.read_csv(textFile, encoding='ISO-8859-1')
-    print(df.shape)
-    df.columns = ['text', 'label']
-    df = df.astype('U')
-    train, test = train_test_split(df, train_size=0.7, test_size=0.3)
+stemmer = EnglishStemmer()
+def stem_tokens(tokens, stemmer2):
+    stemmed = []
+    for item in tokens:
+        stemmed.append(stemmer2.stem(item))
+    return stemmed
 
-    train_text = [f for f in train['text']]
-    test_text = [f for f in test['text']]
+def tokenize(text):
+    text = "".join([ch for ch in text if ch not in string.punctuation])
+    tokens = nltk.word_tokenize(text)
+    stems = stem_tokens(tokens, stemmer)
+    return stems
 
-    le = preprocessing.LabelEncoder()
-    le.fit(train['label'])
-    train_label = le.transform(train['label'])
+# In[18]:
+# 57337
+train_text, train_label, test_text, test_label, subreddits = preprocess(0.7, 0.3, 57337)
 
-    le.fit(test['label'])
-    test_label = le.transform(test['label'])
-    # train = [tuple(x) for x in train[['text', 'label']].values]
-    # test = [tuple(x) for x in test[['text', 'label']].values]
-    return train_text, train_label, test_text, test_label
+# print('Shape of training set: ', np.array(train_text).shape)
+# print('Shape of testing set: ', np.array(test_text).shape)
+train_size = len(train_text)
+test_size = len(test_text)
 
-
-# getText(10000)
-# print(classify('This sentence contains guns'))
-train_text, train_label, test_text, test_label = preprocess()
-
-print('Size of training set: ', len(train_text))
-
-
-print('Size of testing set: ', len(test_text))
-
-
-text_clf = Pipeline([('vect', CountVectorizer()),
+# ----------------------------------------------------------------------------#
+# Naive Bayes Classifier Pipeline
+text_clf = Pipeline([('vect', CountVectorizer(stop_words='english', ngram_range=(1,3), tokenizer=tokenize)),
                      ('tfidf', TfidfTransformer()),
                      ('clf', MultinomialNB())])
-
+t0 = time()
+# print(text_clf.get_params()['vect'])
 text_clf = text_clf.fit(train_text, train_label)
+# CountVectorizer_PARAMS = text_clf.get_params()['vect']
+# CountVectorizer_FEATURES = CountVectorizer_PARAMS.get_feature_names()
+# print('Length of features: ', len(CountVectorizer_FEATURES))
+# print(CountVectorizer_PARAMS)
+# print(CountVectorizer_FEATURES)
+###### Top 1 ######
+# predicted = text_clf.predict(test_text)
+# print(np.mean(predicted == test_label))
+train_time = time() - t0
+print('Training time: ', train_time)
+print('Done training Naive Bayes Classifier')
+#----------------------------------------------------------------------------#
+# Support Vector Machine Pipeline
+print('--------------------------------------------------------------')
+text_clf_SVM = Pipeline([('vect', CountVectorizer(stop_words='english', ngram_range=(1,3), tokenizer=tokenize)),
+                     ('tfidf', TfidfTransformer()),
+                     ('clf', SGDClassifier(penalty='l2', alpha=0.0001, n_iter=np.ceil(10**6 /train_size), random_state=42, loss='log'))])
+t0 = time()
+text_clf_SVM = text_clf_SVM.fit(train_text, train_label)
+###### Top 1 ######
+# predicted = text_clf_SVM.predict(test_text)
+# print(np.mean(predicted == test_label))
+train_time = time() - t0
+print('Training time: ', train_time)
+print('Done training SVM Classifier')
 
 
-predicted = text_clf.predict(test_text)
-print(np.mean(predicted == test_label))
+# In[19]:
+
+np.set_printoptions(precision=3)
 
 
+# In[20]:
+
+predicted_prob = text_clf.predict_proba(test_text)
+predicted_prob_SVM = text_clf_SVM.predict_proba(test_text)
 
 
+# In[53]:
+
+# print(predicted_prob[1])
 
 
+# In[23]:
 
-
+getTopNAccuracy(test_label, predicted_prob,3)
+getTopNAccuracy(test_label, predicted_prob_SVM, 3)
 

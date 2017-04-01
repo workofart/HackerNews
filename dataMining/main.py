@@ -1,5 +1,8 @@
 import _pickle, json, requests, html, datetime, os, threading, time, ijson, ujson
 
+# This module is used for scraping HN using it's official API and storing it into a file
+
+
 ############# Parameters #############
 fileName = 'WhosHiringJan2017'
 fileNameTest = 'Test'

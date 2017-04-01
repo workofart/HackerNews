@@ -1,10 +1,9 @@
-import pprint, ujson, bson, pickle, nltk, html, math
+import html, math
 import pandas as pd
 from pymongo import MongoClient
 from nltk import FreqDist
 from nltk import word_tokenize
 from nltk.corpus import stopwords
-import numpy as np
 import string
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.ensemble import RandomForestClassifier
@@ -17,13 +16,19 @@ vocabulary = db.vocabulary # top 10 most common
 vocabulary_all = db.vocabulary_compressed
 #######################
 
-def bagOfWords(training_set):
+
+def bagOfWords(dataSet):
+    """
+    Utility function for passing data through a series of preprocessing steps
+    and finally extract features using the "BagOfWords" approach
+    :param dataSet: the given data input
+    """
     vectorizer = CountVectorizer(analyzer="word",   \
                                  tokenizer=None,    \
                                  preprocessor=None, \
                                  stop_words=None,   \
                                  max_features=5000)
-    train_data_features = vectorizer.fit_transform(training_set)
+    train_data_features = vectorizer.fit_transform(dataSet)
     train_data_features = train_data_features.toarray()
     print()
     print(u'Shape of features: {}'.format(train_data_features.shape))
@@ -39,10 +44,6 @@ def randomForest(training_set_features):
 
     forest = forest.fit(training_set_features, train["sentiment"])
 
-def prettyPrintWordFreq(dictSet):
-    for word, freq in dictSet:
-        print(u'{};{}'.format(word, freq))
-
 
 def getKids(node, commentList, collection):
     # check if the current node has text and only print if it has depth of 1
@@ -57,22 +58,32 @@ def getKids(node, commentList, collection):
         commentList.append(comment)
     return commentList
 
+
 def statusUpdate(interval, i, total):
+    """
+    Helper function used as a status updater/logger
+    :param interval: how frequent for a given update
+    :param i: input as the current counter, where 0 <= i <= total
+    :param total: The total known items to be processed
+    """
     if (i % interval == 0):
         progress = (i / total) * 100
         print ("\n \n Processing Story %d of %d (%.2f)%% \n \n" % (i, total, progress))
 
+
 def processComments(comments):
+    """
+    Given a list of comments, generate the word frequency map
+    :param comments: list of comments as input
+    :return: list of map of word frequency
+    """
     aggregateComments = []
     for comment in comments:
-        # print('====== Before =========')
-        # print(comment)
         stop = stopwords.words('english')
         # Remove punctuation
         translator = str.maketrans('', '', string.punctuation)
         comment = list((x.encode('utf-8') for x in word_tokenize(html.unescape(comment.lower().translate(translator))) if x not in stop))
-        # print('====== After =========')
-        # print(comment)
+
         aggregateComments.extend(comment)
         # aggregateComments = list(set(aggregateComments))
     fdist = FreqDist(w for w in aggregateComments)
@@ -87,22 +98,33 @@ def checkVocabExist(id):
     else:
         return False
 
-# Process a given range of stories:
-# 1. print out the vocabulary freq of the comments
-# 2. Print out the vocabulary freq of the title words
-# Return: a list of comments from all the processed stories
-def processStories(lowerBound, upperBound, dbFlag, fileFlag, aggregatedCommentsFlag=0, partitions=5):
+
+def processStories(lowerBound, upperBound, dbFlag, fileFlag, aggregatedCommentsFlag=0):
+    """
+    Given a range and an input dataset (db), generate the word frequencies of each submission
+    and store it in a file/db
+    :param lowerBound: the starting point (in terms of id in the DB)
+    :param upperBound: the ending point (in terms of id in the DB)
+    :param dbFlag: true if write to db, false otherwise
+    :param fileFlag: true if write to file, false otherwise
+    :param aggregatedCommentsFlag: true if there is no need to separate comments by story
+    :return: aggregateComments only if the flag aggregatedCommentsFlag is true
+    """
+
     # temp storage
     titleList = []
     textList = []
     commentList = []
     aggregatedComments = []
+
     # csvArray = []
     title = ''
     items = collection.find({'type': 'story', 'id': {'$gte': lowerBound, '$lte': upperBound}, 'descendants' : {'$gt' : 0}}, no_cursor_timeout=True)
     totalItems = items.count()
     print("There are %d matched stories" % totalItems)
-    stepSize = math.ceil(totalItems / partitions)
+
+    # Default step size is 1/5 of total number of items
+    stepSize = math.ceil(totalItems / 5)
     i = 1
     for item in items:
         statusUpdate(stepSize, i, totalItems)
@@ -157,17 +179,9 @@ def processStories(lowerBound, upperBound, dbFlag, fileFlag, aggregatedCommentsF
     #             dataSet.to_csv(f, index=False, header=False)
     #     except UnicodeEncodeError:
     #         print('Cannot encode string: ' + str(i))
-    return aggregatedComments
+    if aggregatedCommentsFlag:
+        return aggregatedComments
 
-def getVocabulary():
-    items = vocabulary.find()
-    for item in items:
-        print(item)
-
-
-# i = 253
-
-# compressed: i = 281
 
 for i in range(100,130):
     print("====> i: %d" % i)
@@ -179,21 +193,10 @@ for i in range(100,130):
 #     print("====> i: %d" % i)
 #     processStories(10000* (i - 1) + 1, 10000 * i, partitions=100, dbFlag=False, fileFlag=True)
 
-# processStories(8532250, 8532280, partitions=1, dbFlag=False, fileFlag=True)
 
-########## >>>>> 3491542
 
 # for i in range (1, 120):
 #     print(i)
 # getVocabulary()
 # bagOfWords(processStories(0, 300))
-
-# print(string.punctuation)
-
-# print('Titles:')
-# pprint.pprint(titleList)
-
-
-# print('Text:')
-# pprint.pprint(textList)
 
