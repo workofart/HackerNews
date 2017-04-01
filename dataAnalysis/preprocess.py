@@ -34,9 +34,13 @@ subredditsFile = join(dirPath, 'subReddits.csv')
 textFile = join(dirPath, 'fullText.csv')
 
 
-# Utility function that prints the status of the current operation
-# Can be used in conjunction with other functions
 def statusUpdate(interval, i, total):
+    """
+    Helper function used as a status updater/logger
+    :param interval: how frequent for a given update
+    :param i: input as the current counter, where 0 <= i <= total
+    :param total: The total known items to be processed
+    """
     if (i % interval == 0):
         progress = (i / total) * 100
         print ("\n \n Processing Story %d of %d (%.2f)%% \n \n" % (i, total, progress))
@@ -74,9 +78,15 @@ def plot_confusion_matrix(cm, classes,
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
 
-# Utility function that loops through all comments and stores the
-# subreddits count and subreddit title into a csv file
+
+
 def exportSubReddits():
+    """
+    Utility function that loops through all comments and stores the
+    subreddits count and subreddit title into a csv file
+    to prepare for shortlisting the subreddits for sample construction
+    :return:
+    """
     subreddits = dict()
     for filePath in filePaths:
         with open(filePath, 'r') as f:
@@ -103,8 +113,13 @@ def exportSubReddits():
         for w in sortedSubreddits:
             f.write(w + ',' + str(subreddits[w]) + '\n')
 
-# Utility function for reading subreddits array from csv file
+
 def getSubReddit():
+    """
+    Utility function for reading subreddits array from csv file
+    The csv file should be all the subreddits that you defined to be usable
+    :return: list of subreddits from the csv
+    """
     # Read from csv to get list of subreddits
     with open(subredditsFile, 'r') as f:
         reader = csv.reader(f)
@@ -113,10 +128,16 @@ def getSubReddit():
             temp.append(row[0])
     return temp
 
-# Given "subreddits" file, loop through all comments and save the ones
-# in the given list
-# RUN THIS ONLY IF SUBREDDITS HAVE CHANGED
+
 def getText(interval):
+    """
+    RUN THIS ONLY IF SUBREDDITS HAVE CHANGED, if not, then all the text would be
+    saved in separate csv files in the 'category' folder
+    Given "subreddits" file, loop through all comments and save the ones
+    in the given list
+    :param interval: solely for status updating purposes
+    :return:
+    """
     subreddits = getSubReddit()
     print('Subreddits: \n', subreddits)
     print('There are %d subreddits in total' % len(subreddits))
@@ -153,16 +174,27 @@ def getText(interval):
                 except UnicodeEncodeError:
                     pass
 
-# Classify a sentence by using the TextBlob
-# Naive Bayes classifier
-# (Very slow)
+
 def textBlobClassify(input):
+    """
+    Classify a sentence by using the TextBlob - Naive Bayes classifier
+    (Very slow)
+    :param input: Input text
+    :return: returns the trained classifier
+    """
     with open(textFile, 'r') as f:
         classifier = NaiveBayesClassifier(f, format='csv')
     return classifier.classify(input)
 
-# Randomly shuffles the dataset and pick out predefined % as training set, predefined % as testing set
+
 def preprocess(trainingFraction, testingFraction, minSample=2107):
+    """
+    Randomly shuffles the dataset and pick out predefined fraction % as training/testing set
+    :param trainingFraction: in terms of % of total dataSet
+    :param testingFraction:  in terms of % of total dataSet
+    :param minSample: minimum number of samples from each category (subreddit)
+    :return: training/testing set raw text and labels, selected subreddits
+    """
     # Loop through all the files in the category folder
     categoryDir = join(dirPath, 'category')
 
@@ -196,8 +228,14 @@ def preprocess(trainingFraction, testingFraction, minSample=2107):
     return train_text, train_label, test_text, test_label, subreddits
 
 
-# Getting the best N predictions
+
 def getTopNAccuracy(test_label, predicted_prob, n=3):
+    """
+    Getting the best N predictions
+    :param test_label: the ground truth labels
+    :param predicted_prob: the predicted labels
+    :param n: N best predictions
+    """
     print('------------------------------------------------')
     print('Getting best [', n, '] accuracy')
     total = len(predicted_prob)
@@ -205,16 +243,21 @@ def getTopNAccuracy(test_label, predicted_prob, n=3):
 
     count = 0
     for i in range(0, total):
-    #     print('bestn: ' + str(bestn[i]) + ' | truth: ' + str(test_label[i]))
+        # Printing out the best N labels
+        # print('bestn: ' + str(bestn[i]) + ' | truth: ' + str(test_label[i]))
         if test_label[i] in bestn[i]:
             count += 1
     print('Count: ', count)
     print('Accuracy: ', count / total)
 
-# RUN THIS AFTER RUNNING getText()
-# Gets the minimum samples size across all subreddits to support
-# Training/testing set construction
+
 def getMinSamples():
+    """
+    RUN THIS AFTER RUNNING getText()
+    Gets the minimum samples size across all subreddits to support
+    Training/testing set construction
+    :return: the minimum samples across all subreddits
+    """
     minSamples = 9999999999
     categoryDir = join(dirPath, 'category')
     for file in listdir(categoryDir):
@@ -227,11 +270,11 @@ def getMinSamples():
         if minSamples > df.shape[0]:
             minSamples = df.shape[0]
     print('\n=======\nMin samples: ', minSamples)
+    return minSamples
 
 
 # RUN THIS ONLY IF DATASOURCE HAVE CHANGED
 # exportSubReddits()
-
 
 # RUN THIS ONLY IF SUBREDDITS HAVE CHANGED
 # getText(1)
