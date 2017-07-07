@@ -1,0 +1,57 @@
+lda = models.LdaMulticore(corpus, num_topics=25,
+                              id2word=dictionary,
+                              eval_every=5,
+                              chunksize=5500,
+                              passes=100)
+
+Cluster 0
+['quot', 'phone', 'watch', 'apple', 'one', 'market', 'iphone', 'like', 'would', 'think', 'people', 'really', 'time', 'phones', 'device', 'years', 'wine', 'data', 'see', 'watches']
+Cluster 1
+['reading', 'way', 'two', 'read', 'right', 'would', 'started', 'hour', 'mostly', 'half', 'much', 'even', 'first', 'commute', 'nt', 'completed', 'year', 'high', 'school', 'got']
+Cluster 2
+['people', 'us', 'quot', 'would', 'http', 'government', 'law', 'one', 'like', 'rel', 'nofollow', 'href', 'police', 'think', 'even', 'country', 'much', 'also', 'get', 'could']
+Cluster 3
+['nt', 'rent', 'city', 'apartment', 'food', 'airbnb', 'house', 'live', 'people', 'valley', 're', 'find', 'silicon', 'housing', 'home', 'like', 'place', 'property', 'would', 'landlords']
+Cluster 4
+['quot', 'like', 'people', 'think', 'would', 'one', 'http', 'lisp', 'get', 'good', 'time', 'nt', 'even', 'really', 'know', 'something', 'rel', 'nofollow', 'href', 'see']
+Cluster 5
+['use', 'like', 'http', 'web', 'nofollow', 'href', 'rel', 'windows', 'using', 'would', 'want', 'quot', 'open', 'app', 'work', 'also', 'google', 'get', 'https', 'one']
+Cluster 6
+['quot', 'us', 'go', 'http', 'health', 'insurance', 'nofollow', 'rel', 'href', 'think', 'care', 'would', 'like', 'get', 'big', 'going', 'even', 'people', 'one', 'snowden']
+Cluster 7
+['science', 'research', 'scientific', 'theory', 'data', 'study', 'studies', 'nt', 'physics', 'drug', 'people', 'drugs', 'one', 'evidence', 'scientists', 'field', 'effects', 'human', 'theories', '62']
+Cluster 8
+['http', 'href', 'rel', 'nofollow', 'data', 'use', 'https', 'using', 'would', 'server', 'like', 'one', 'code', 'also', 'could', 'need', 'quot', 'file', 'time', 'get']
+Cluster 9
+['quot', 'people', 'game', 'games', 'one', 'like', 'would', 'years', 'much', 'think', 'get', 'http', 'world', 'us', 'new', 'also', 'time', 'even', 'work', 'many']
+Cluster 10
+['http', 'nofollow', 'rel', 'href', 'openssl', 'mit', 'quot', 'page', 'gps', 'news', 'report', 'openbsd', 'https', 'new', 'pdf', 'using', 'libressl', 'music', 'time', 'well']
+Cluster 11
+['amazon', 'book', 'books', 'would', 'http', 'customer', 'like', 'time', 'hn', 'people', 'get', 'kindle', 'nt', 'one', 'sales', 'know', 'talk', 'also', 'need', 'use']
+Cluster 12
+['http', 'car', 'water', 'href', 'nofollow', 'rel', 'uber', 'cars', 'would', 'energy', 'could', 'space', 'power', 'drivers', 'quot', 'like', 'solar', 'cost', 'one', 'much']
+Cluster 13
+['work', 'nt', 'like', 'school', 'really', 've', 'get', 'time', 'people', 'good', 'learn', 'working', 'something', 'want', 'things', 'great', 'go', 'job', 'college', 'learning']
+Cluster 14
+['code', 'language', 'pre', 'like', 'nt', 'http', 'would', 'use', 'one', 'python', 'programming', '62', 'languages', 'write', 'much', 'think', 'href', 'rel', 'nofollow', 'time']
+Cluster 15
+['facebook', 'would', 'nt', 'people', 'like', 'content', 'use', 'twitter', 'get', 'internet', 'think', 'account', 'one', 'could', 'email', 'also', 'way', 'something', 'want', 'netflix']
+Cluster 16
+['quot', 'money', 'people', 'would', 'bitcoin', 'like', 'pay', 'market', 'price', 'one', 'get', 'even', 'make', 'bank', 'much', 'value', 'think', 'http', 'us', 'could']
+Cluster 17
+['company', 'startup', 'work', 'job', 'would', 'product', 'get', 'business', 'startups', 'companies', 'people', 'idea', 'working', 'time', 'good', 'know', 'experience', 'one', 'like', 'project']
+Cluster 18
+['quot', 'http', 'like', 'people', 'gt', 'one', 'rel', 'nofollow', 'href', 'would', 'think', 'even', 'also', 'time', 'really', 'https', 'know', 'way', 'much', 'something']
+Cluster 19
+['google', 'quot', 'chrome', 'browser', 'web', 'firefox', 'page', 'search', 'like', 'site', 'https', 'content', 'http', 'use', 'javascript', 'text', 'href', 'rel', 'nofollow', 'ads']
+Cluster 20
+['students', 'would', 'http', 'university', 'education', 'people', 'college', 'student', 'papers', 'course', 'academic', 'research', 'one', 'get', 'math', 'href', 'good', 'paper', 'nofollow', 'rel']
+Cluster 21
+['http', 'nt', 'href', 'nofollow', 'rel', 'like', 'would', 'one', 'site', 'think', 'nbsp', 'see', 'people', 'get', '38', 've', 'good', 'really', 'could', 'much']
+Cluster 22
+['nt', 'people', 'would', 're', 'think', 'like', 'one', 'get', 've', 'time', 'even', 'http', 'could', 'make', 'know', 'really', 'good', 'much', 'ca', 'way']
+Cluster 23
+2017-07-03 16:51:02,090 : INFO : Generating docs array
+['java', 'rails', 'php', 'ruby', 'like', 'team', 'language', 'python', 'learn', 'django', 'use', 'nt', 'things', 'developers', 'time', 'new', 'framework', 'code', 'perl', 'api']
+Cluster 24
+['apple', 'nt', 'app', 'android', 'would', 'apps', 'iphone', 'like', 'one', 'ios', 'hardware', 'windows', 'use', 'even', 'microsoft', 'really', 'google', 'phone', 'os', 'ipad']

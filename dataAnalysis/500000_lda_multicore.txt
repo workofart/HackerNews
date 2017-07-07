@@ -1,0 +1,50 @@
+Cluster 0
+['https', 'href', 'rel', 'nofollow', 'http', 'use', 'would', 'password', 'file', 'data', 'like', 'using', 'code', 'key', 'user', 'security', 'email', 'files', 'one', 'also']
+Cluster 1
+['work', 'get', 'company', 'time', 'startup', 'job', 'like', 'good', 'would', 'working', 'want', 'know', 'people', 'really', 'team', 'one', 'companies', 'project', 'startups', 'business']
+Cluster 2
+['people', 'school', 'students', 'would', 'http', 'education', 'college', 'women', 'like', 'schools', 'nofollow', 'rel', 'href', 'class', 'kids', 'one', 'think', 'society', 'get', 'teachers']
+Cluster 3
+['car', 'cars', 'uber', 'drivers', 'traffic', 'driving', 'driver', 'drive', 'road', 'vehicle', 'electric', 'tech', 'taxi', 'affiliate', 'tesla', 'get', 'speed', 'media', 'vehicles', 'truck']
+Cluster 4
+['apple', 'windows', 'app', 'microsoft', 'android', 'apps', 'iphone', 'phone', 'os', 'would', 'use', 'like', 'one', 'ios', 'mobile', 'new', 'ipad', 'device', 'still', 'google']
+Cluster 5
+['patent', 'http', 'copyright', 'patents', 'would', 'rel', 'nofollow', 'href', 'use', 'health', 'drugs', 'drug', 'like', 'food', 'medical', 'cancer', 'system', 'body', 'could', 'software']
+Cluster 6
+['http', 'rel', 'href', 'nofollow', 'web', 'browser', 'chrome', 'javascript', 'firefox', 'https', 'use', 'like', 'flash', 'using', 'js', 'css', 'html', 'code', 'browsers', 'see']
+Cluster 7
+['would', 'http', 'book', 'one', 'science', 'time', 'computer', 'books', 'think', 'like', 'research', 'nofollow', 'rel', 'read', 'href', 'math', 'could', 'learning', 'human', 'know']
+Cluster 8
+['nt', 're', 'people', 've', 'think', 'like', '62', 'one', 'ca', 'time', 'good', 'something', 'would', 'll', 'get', 'really', 'things', 'even', 'know', 'way']
+Cluster 9
+['bitcoin', 'currency', 'bank', 'http', 'water', 'bitcoins', 'account', 'would', 'use', 'transactions', 'nofollow', 'rel', 'href', 'money', 'btc', 'one', 'gold', 'value', 'people', 'transaction']
+Cluster 10
+['people', 'get', 'like', 'live', 'work', 'day', 'home', 'time', 'would', 'city', 'living', 'go', 'much', 'one', 'around', 'area', 'life', 'also', 'years', 'house']
+Cluster 11
+['us', 'government', 'tax', 'people', 'would', 'http', 'money', 'card', 'country', 'like', 'china', 'taxes', 'need', 'system', 'countries', 'one', 'credit', 'back', 'business', 'europe']
+Cluster 12
+['people', 'would', 'like', 'one', 'person', 'think', 'someone', 'women', 'know', 'even', 'also', 'could', 'get', 'men', 'feel', 'way', 'say', 'really', 'friends', 'social']
+Cluster 13
+['http', 'hn', 'rel', 'nofollow', 'href', 'please', 'work', 'remote', 'location', 'looking', 'job', 'post', 'learning', 'lead', 'free', 'web', 'seeking', 'experience', 'freelancer', 'may']
+Cluster 14
+['google', 'facebook', 'users', 'search', 'use', 'internet', 'data', 'ads', 'would', 'people', 'user', 'content', 'like', 'site', 'service', 'account', 'sites', 'web', 'social', 'information']
+Cluster 15
+['quot', 'gt', 'people', 'like', 'think', 'one', 'even', 'things', 'something', 'amp', 'get', 'time', 'good', 'really', 'way', 'many', 'https', 'much', 'make', 'work']
+Cluster 16
+['would', 'us', 'government', 'people', 'http', 'law', 'like', 'think', 'nofollow', 'rel', 'href', 'public', 'even', 'one', 'nsa', 'could', 'information', 'legal', 'laws', 'data']
+Cluster 17
+['twitter', 'security', 'phone', 'people', 'see', 'would', 'could', 'like', 'camera', 'photos', 'get', 'kickstarter', 'use', 'photo', 'vr', 'think', 'id', 'going', 'facebook', 'social']
+Cluster 18
+['http', 'href', 'nofollow', 'rel', 'would', 'could', 'one', 'like', 'energy', 'space', 'power', 'also', 'much', 'https', 'even', 'article', 'time', 'use', 'see', 'speed']
+Cluster 19
+['http', 'like', 'href', 'nofollow', 'rel', 'site', 'hn', 'would', 'page', 'get', 'app', 'see', 'one', 'thanks', 'good', 'great', 'idea', 'use', 'think', 'also']
+Cluster 20
+['data', 'server', 'use', 'would', 'api', 'database', 'using', 'servers', 'need', 'cloud', 'http', 'like', 'one', 'web', 'service', 'run', 'time', 'running', 'system', 'get']
+Cluster 21
+['use', 'code', 'source', 'like', 'software', 'open', 'linux', 'git', 'would', 'project', 'using', 'time', 'one', 'http', 'work', 'things', 'tools', 'emacs', 'system', 'php']
+Cluster 22
+['code', 'language', 'pre', 'http', 'like', 'use', 'languages', 'would', 'href', 'programming', 'rel', 'nofollow', 'java', 'python', 'one', 'using', 'go', 'write', 'also', 'really']
+Cluster 23
+['money', 'would', 'pay', 'market', 'business', 'company', 'price', 'get', 'companies', 'make', 'people', 'buy', 'value', 'like', 'cost', 'much', 'free', 'even', 'think', 'could']
+Cluster 24
+['game', 'games', 'play', 'music', 'video', 'tv', 'watch', 'playing', 'players', 'player', 'youtube', 'movie', 'fun', 'movies', 'gaming', 'played', 'new', 'http', 'wwwyoutubecom', '60']

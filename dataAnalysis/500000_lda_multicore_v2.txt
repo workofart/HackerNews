@@ -1,0 +1,50 @@
+Cluster 0 (Social)
+['facebook', 'patent', 'patents', 'social', 'fb', 'art', 'wifi', 'kickstarter', 'software', 'system', 'prior', 'vr', 'ip', 'thing', 'right', 'company', 'business', 'case', 'innovation', 'world']
+Cluster 1 (Startups)
+['company', 'companies', 'startup', 'money', 'startups', 'business', 'employees', 'job', 'tech', 'working', 'pay', 'lot', 'valley', 'go', 'years', 'going', 'many', 'take', 'employee', 'founders']
+Cluster 2 (Science)
+['women', 'problem', 'article', 'science', 'say', 'point', 'different', 'human', 'many', 'research', 'men', 'example', 'better', 'might', 'world', 'seems', 'data', 'interesting', 'theory', 'question']
+Cluster 3 (Business/Finance)
+['money', 'pay', 'business', 'free', 'service', 'card', 'customers', 'account', 'customer', 'credit', 'app', 'amazon', 'paid', 'cost', 'us', 'paying', 'bank', 'month', 'buy', 'price']
+Cluster 4 (Software Development)
+['source', 'open', 'software', 'code', 'linux', 'git', 'project', 'github', 'system', 'projects', 'ubuntu', 'install', 'version', 'tools', 'run', 'better', 'files', 'used', 'kernel', 'developers']
+Cluster 5 (Technology)
+['apple', 'windows', 'android', 'apps', 'app', 'iphone', 'phone', 'os', 'ios', 'mobile', 'device', 'hardware', 'ipad', 'google', 'devices', 'microsoft', 'better', 'mac', 'screen', 'phones']
+Cluster 6 (Society/Economics)
+['us', 'money', 'tax', 'government', 'taxes', 'income', 'pay', 'system', 'debt', 'economy', 'country', 'economic', 'social', 'wealth', 'spending', 'years', 'rich', 'back', 'society', 'countries']
+Cluster 7 (Software)
+['swift', 'ruby', 'maze', 'program', 'creativity', 'creative', 'output', 'generated', 'hard', 'slackware', 'software', 'enough', 'plural', 'possible', 'etc', 'right', 'used', 'april', 'us', 'charger']
+Cluster 8 (Entertainment)
+['game', 'games', 'video', 'book', 'music', 'books', 'play', 'watch', 'tv', 'content', 'playing', 'great', 'digital', 'interesting', 'read', 'youtube', 'movie', 'amazon', 'wwwyoutubecomwatch', 'players']
+Cluster 9 (Web Infrastructure/Technologies)
+['data', 'server', 'service', 'network', 'servers', 'api', 'cloud', 'internet', 'google', 'services', 'hosting', 'host', 'bandwidth', 'web', 'run', 'per', 'aws', 'amazon', 'storage', 'running']
+Cluster 10 (Innovation)
+['musk', 'hyperloop', 'war', 'article', 'world', 'engineering', 'different', 'tube', 'spacex', 'project', 'israel', 'us', 'advice', 'problem', 'idea', 'design', 'made', 'military', 'code', 'north']
+Cluster 11 (Programming)
+['language', 'code', 'java', 'languages', 'python', 'programming', 'go', 'javascript', 'lot', 'write', 'php', 'ruby', 'better', 'web', 'used', 'framework', 'lisp', 'many', 'haskell', 'writing']
+Cluster 12 (Finance/Stock Market)
+['market', 'microsoft', 'money', 'bitcoin', 'price', 'value', 'buy', 'company', 'product', 'companies', 'products', 'business', 'years', 'apple', 'sell', 'currency', 'many', 'point', 'going', 'stock']
+Cluster 13 (Education)
+['school', 'job', 'learn', 'years', 'lot', 'many', 'students', 'college', 'better', 'someone', 'working', 'problem', 'experience', 'programming', 'learning', 'going', 'go', 'hard', 'find', 'never']
+Cluster 14 (Programming)
+['code', 'pre', 'function', 'lt', 'rust', 'memory', 'example', 'type', 'case', 'data', 'write', 'actually', 'return', 'used', 'read', 'line', 'two', 'error', 'go', 'list']
+Cluster 15 (Security)
+['security', 'password', 'data', 'email', 'user', 'access', 'key', 'users', 'information', 'address', 'secure', 'account', 'passwords', 'file', 'problem', 'code', 'someone', 'without', 'privacy', 'service']
+Cluster 16 (Websites)
+['google', 'site', 'search', 'content', 'users', 'twitter', 'page', 'news', 'ads', 'facebook', 'sites', 'post', 'article', 'read', 'link', 'web', 'comments', 'social', 'user', 'reddit']
+Cluster 17 (Resource)
+['car', 'cars', 'power', 'cost', 'water', 'energy', 'city', 'around', 'us', 'space', 'live', 'go', 'lot', 'going', 'system', 'area', 'nuclear', 'years', 'high', 'problem']
+Cluster 18 (Health/Body)
+['life', 'day', 'feel', 'years', 'many', 'food', 'go', 'thing', 'back', 'health', 'better', 'never', 'lot', 'going', 'find', 'body', 'every', 'actually', 'take', 'eat']
+Cluster 19 (Database)
+['database', 'light', 'data', 'energy', 'earth', 'universe', 'sql', 'life', 'mongodb', 'mysql', 'speed', 'space', 'bike', 'oracle', 'mongo', 'years', 'databases', 'travel', 'sun', 'postgres']
+Cluster 20 (Product/Startup)
+['idea', 'thanks', 'startup', 'great', 'yc', 'email', 'product', 'find', 'll', 'ideas', 'feedback', 'help', 'got', 'post', 'site', 'ask', 'guys', 'name', 'someone', 'looking']
+Cluster 21 (Legal)
+['copyright', 'law', 'property', 'legal', 'airbnb', 'illegal', 'right', 'say', 'hotel', 'money', 'laws', 'price', 'theft', 'someone', 'may', 'rights', 'many', 'argument', 'going', 'actually']
+Cluster 22 (Politics)
+['us', 'government', 'law', 'public', 'someone', 'say', 'right', 'point', 'many', 'case', 'person', 'going', 'said', 'thing', 'world', 'information', 'actually', 'legal', 'bad', 'system']
+Cluster 23 (Web)
+['web', 'app', 'browser', 'page', 'text', 'design', 'firefox', 'chrome', 'site', 'great', 'css', 'html', 'users', 'javascript', 'looks', 'nice', 'emacs', 'user', 'ui', 'version']
+Cluster 24
+['software', 'please', 'job', 'remote', 'looking', 'location', 'developer', 'post', 'web', 'development', 'developers', 'experience', 'free', 'team', 'lead', 'learning', 'seeking', 'position', 'may', 'engineer']

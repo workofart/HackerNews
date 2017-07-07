@@ -1,0 +1,28 @@
+lda = models.LdaModel(corpus, num_topics=25,
+                            id2word=dictionary,
+                            update_every=5,
+                            chunksize=10000,
+                            passes=100)
+
+topics_matrix = lda.show_topics(formatted=False, num_words=20)
+
+Cluster 0
+['team', 'data', 'company', 'bugs', 'continuous', 'like', 'deployment', 'would', 'get', 'also', 'still', 'transaction', 'hn', 'one', 'something', 'time', 'audit', 'production', 'per', 'person']
+Cluster 1
+['use', 'nt', 'http', 'security', 'data', 'would', 'https', 'using', 'server', 'href', 'rel', 'nofollow', 'access', 'service', 'like', 'user', 'password', 'could', 'users', 'one']
+Cluster 2
+['money', 'quot', 'company', 'would', 'people', 'get', 'market', 'business', 'like', 'companies', 'make', 'one', 'think', 'pay', 'even', 'much', 'product', 'time', 'could', 'need']
+Cluster 3
+['apple', 'windows', 'app', 'android', 'nt', 'like', 'use', 'iphone', 'phone', 'apps', 'would', 'linux', 'one', 'software', 'os', 'really', 'ios', 'new', 'even', 'microsoft']
+Cluster 4
+['code', 'language', 'pre', 'nt', 'like', 'would', '62', 'programming', 'http', 'languages', 'one', 'use', 'lisp', 'python', 'think', 'much', 'write', 'way', 'get', 'href']
+Cluster 5
+['java', 'microsoft', 'like', 'oracle', 'use', 'work', 'api', 'native', 'android', 'net', 'one', 'windows', 'performance', 'javascript', 'dart', 'platform', 'language', 'also', 'js', 'apps']
+Cluster 6
+['http', 'href', 'nofollow', 'rel', 'https', 'like', 'one', 'quot', '38', 'google', 'amp', 'news', 'time', 'get', 'also', 'interesting', 'really', 'hn', 'newsycombinatorcom', 'live']
+Cluster 7
+['people', 'would', 'quot', 'nt', 'http', 'us', 'government', 'like', 'one', 'think', 'even', 'law', 'rel', 'nofollow', 'href', 'get', 'make', 'could', 'also', 'way']
+Cluster 8
+['nt', 'would', 'http', 'one', 'school', 'quot', 'students', 'like', 'think', 'get', 'people', 'kids', 'also', 'years', 'href', 'nofollow', 'rel', 'good', 'something', 'even']
+Cluster 9
+['nbsp', 'app', 'whatsapp', 'http', 'launches', 'nt', 'species', 'photos', 'beta', 'facebook', '62', 'faces', 'one', 'sort', 'sharing', 'prenda', 'tag', 'user', 'released', 'created']

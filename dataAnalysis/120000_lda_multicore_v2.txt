@@ -1,0 +1,50 @@
+Cluster 0
+['patent', 'patents', 'software', 'system', 'things', 'point', 'world', 'article', 'us', 'right', 'say', 'need', 'still', 'better', 're', 'something', 'well', 'true', '38', 'number']
+Cluster 1
+['science', 'quot', 'talk', 'something', 'problem', 'video', 'computer', 'light', 'still', 'going', 'years', 'actually', 'article', 'well', 'try', 'problems', 'hn', 'need', 'look', 'interesting']
+Cluster 2
+['project', 'web', 'working', 'https', 'email', 'bitcoin', 'oracle', '38', 'angular', 'already', 'play', 'meteor', 'dev', 'related', 'ember', 'item', 'newsycombinatorcom', 'fantastic', 'thread', 'want']
+Cluster 3
+['quot', 'docker', 'wine', 'foxes', 'tesla', 'bears', 'women', 'paas', 'deis', 'drink', 'containers', 'future', 'taste', 'water', 'used', 'great', 'sony', 'story', 'build', 'cheap']
+Cluster 4
+['bitcoin', 'quot', 'water', 'value', 'currency', 'money', 'bitcoins', 'gold', 'https', 'transaction', 'btc', 'long', 'go', 'price', 'thing', 'used', 'lot', 'still', 'transactions', 'need']
+Cluster 5
+['reading', 'read', 'two', 'right', 'started', 'mostly', 'study', 'half', 'books', '38', 'science', 'hour', 'depression', 'different', 'first', 'used', 'high', 'day', 'completed', 'commute']
+Cluster 6
+['windows', 'linux', 'open', 'microsoft', 'software', 'using', 'work', 'source', 'os', 'files', 'file', 'desktop', 'ubuntu', 'support', 'system', 'still', 'want', 'users', 'need', 'user']
+Cluster 7
+['62', 'amazon', '60', 'customer', 'work', 'code', 'kindle', 'hn', 'working', 'mars', 're', 'things', 'without', 'pdf', 've', 'earth', 'keep', 'startup', 'london', 'issues']
+Cluster 8
+['quot', 'git', 'https', 'google', 'security', 'certificate', 'need', 'code', 'key', 'using', 'secure', 'commit', 'encryption', 'number', 'search', 'system', 'ssl', 'still', 'trust', 'internet']
+Cluster 9
+['code', 'quot', 'language', 'pre', 'using', 'python', 'gt', 'data', 'https', 'something', 'programming', 'write', 'things', 'java', 'work', 'ruby', 'languages', 'need', 'used', 'well']
+Cluster 10
+['apple', 'android', 'phone', 'app', 'iphone', 'quot', 'apps', 'ios', 'hardware', 'device', 'watch', 'market', 'google', 'mobile', 'devices', 'phones', 'software', 'ipad', 'still', 'better']
+Cluster 11
+['us', 'money', 'country', 'facebook', 'countries', 'greece', 'tax', 'government', 'taxes', 're', 'eu', 'economy', 'many', 'lot', 'debt', '62', 'world', 'care', 'germany', 'going']
+Cluster 12
+['money', 'bank', 'credit', 'account', 'card', 're', 'banks', 'amazon', 'pay', 'case', 'fees', 'law', 'legal', 'us', 'cash', 'service', '62', 'company', 'say', 'business']
+Cluster 13
+['airbnb', 'rent', 'apartment', 're', 'two', 've', 'take', 'many', 'landlords', 'dollar', 'find', 'property', 'hands', 'actually', 'house', 'less', 'price', 'landlord', 'city', 'us']
+Cluster 14
+['code', 'pre', 'https', 'newsycombinatorcom', 'item', 'map', 'nodejs', 'application', 'canvas', 'ever', 'encounter', 'whether', 'web', 'sum', 'rails', '10', 'total', 'happen', 'released', 'hacker']
+Cluster 15
+['design', 'web', 'site', 'work', 've', 'great', 'business', 'css', 'look', 'yahoo', 'want', 'things', 'better', 'startup', 'question', 'bootstrap', 'ui', 'year', 'bit', 'lot']
+Cluster 16
+['google', 'site', 'hn', 'page', 'content', 'data', 'email', 'https', 'users', 'facebook', 'want', 'user', 'web', 'using', 'news', 'twitter', 'link', 'service', 'website', 'search']
+Cluster 17
+['game', 'games', 're', 've', 'vote', 'going', 'yc', 'things', 'well', 'many', 'system', 'great', 'idea', 'something', 'better', 'business', 'want', 'change', 'say', 'us']
+Cluster 18
+['quot', 'us', 'government', 'gt', 'law', 'say', 'police', 'many', 'right', 'case', 'actually', 'something', 'article', 'https', 'without', 'person', 'thing', 'things', 'laws', 'point']
+Cluster 19
+['quot', 'chrome', 'firefox', 'browser', 'mozilla', 'https', 'idea', 'child', 'google', 'back', 'old', 'right', 'using', 'actually', 'still', 'porn', 'web', 're', 'gt', 'amp']
+Cluster 20
+['app', 'read', 'photos', 'something', 'music', 'paper', 'go', 'great', 'got', 'papers', 've', 'take', 'want', 'ideas', 'big', 'product', 'never', 'idea', 'photo', 'point']
+Cluster 21
+['quot', 'work', 'job', 'school', 'things', 'want', 'years', 'well', 'lot', 'go', 'many', 'better', 'problem', 'experience', 'someone', 'something', 'students', 'learn', 'going', 'college']
+Cluster 22
+['quot', 'money', 'market', 'gt', 'pay', 'want', 'companies', 'something', 'going', 'service', 'still', 'many', 'cost', 'well', 'us', 'need', 'point', 'internet', 'company', 'business']
+Cluster 23
+['work', 'company', 'startup', 'working', 'business', 'product', 'something', 'need', 'want', 'day', 're', 'project', 'idea', 'money', 'startups', 've', 'things', 'hours', 'developer', 'start']
+Cluster 24
+['server', 'using', 'cloud', 'servers', 're', 'service', 'hosting', 'want', 'something', 'https', 'aws', 'need', 've', 'data', 'password', 'dns', 'web', 'running', 'sure', 'domain']

@@ -1,0 +1,326 @@
+Hackernews Categories
+1. Startups
+2. Web
+3.
+4. Finance
+5. 
+6. Technical
+7. 
+---------------- 3 ------------------
+The Autobiography of Benjamin Franklin - full story of a 1720s startup
+Google Apps a Productivity Killer?  (from a Microsoft guy :) )
+Startup: Firefox sidebar for chatting with fellow visitors to any website.
+Is it acceptable for software to lie (like in the ESP Game say)?
+Facebook is Stickier than Peanut Butter
+Reputation Capital and the Ruby on Rails Community
+How do you build the perfect local community Web site 
+(800) 511-8544 -- Speak with the CEO -- 7 days a week 12:00-4:00PM
+The Attention Economy: An Overview
+5 Reasons Why Flickr & Youtube are Successful
+Will Digg.com be sold in 2007?
+AddThis.com -- Saving 100 Million People 20 Minutes Each
+Startup School Responses Delayed for a Day
+Practicing Programming (Steve Yegge)
+Intro to funding: Friends and Family
+-----------------------------------
+
+---------------- 5 ------------------
+How a linker works [video, admittedly in RM format]
+UI design: When tags work (librarything.com) and when they don't (amazon.com)
+U.S. Says Hedge Fund Regulation Is `Working Well'
+Writing and Maintaining Software are not Engineering Activities
+Software Exploited by Pirates Goes to Work for Hollywood
+How MySQL Cluster works
+Tim O&#39;Reilly: Gift Economy or Honeymoon?
+Looking for partners to build ebook/self-publishing related website
+Getting Rich off Those Who Work for Free
+Text Enrichment Software -- Better writing through technology
+how equity dilution works
+Being the Averagest
+Grokking the anthropology of social networks
+iReader Content Distilling and Vector-Based-Search (Cringley)
+How to assess a job offer from a startup
+The rise and fall of corporate R&D
+Cross-site request forgery
+Looking for webmasters post what your looking for here 
+Smile for the Google 3D Mapping Truck
+Why so much capital? 
+Battling Isolation When Working at Home
+Looking for a summer job? Don't.
+Wikipedia founder to challenge Google & Yahoo
+Success Is All in a Day's Work
+-----------------------------------
+---------------- 6 ------------------
+Amazon's S3, pay by the byte storage. 
+NDA = Not doing anything
+6-keys keyboard really smart for mobile touch typing
+Feature-itis!  How to avoid.
+Services you'd keep using if they weren't free
+Does Using MyBlogLog Can Banned You From Google Adsense????
+Marketing using Educational or Entertainment means
+What algorithm does news.YC use to filter spam?
+Any thoughts on collaborative invention (e.g., using human-based genetic algorithms)?
+Slife: displays graphically what you do with your computer
+On Improving Schools
+Four unusual uses for Subversion
+Do You Need to Write a Business Plan?
+10 Company name types on TechCrunch: pros and cons - useful if you&#39;re trying to pick a name
+Why you should study at Stanford
+Using Safari can slow your system down as much as 76% vs Firefox
+One Laptop Per Child: Hackers Wanted
+Seriosity To Fix Email Overload (or not)
+Klipboardz Blog - Using Emergence for Social News
+Free online version of Photoshop coming soon
+Software and craftsmanship
+Google introduced new fraud measures (again)
+Google Trends (Very useful, for those who don't already use it)
+[IBM developerWorks] Develop Web applications for local use - Learn when a browser is better than a GUI application, and when a CGI is best of all
+Many Eyes - IBM's social use of visualizations
+YuMe uses humans and machines for video ads
+Desktop Software: A Failed Model
+How to write a search engine
+Using Games to Generate Useful Data (two new games mentioned for natural language processing)
+WordPress announces support for OpenID
+The New Wisdom of the Web
+-----------------------------------
+---------------- 7 ------------------
+Sam Altman finally gets decent pic in publication
+Will Google take on Xbox Live?
+Ambition: Why Some People Are Most Likely To Succeed
+Fred Wilson: Patience pays for founders
+Threadless founders seminar
+Sun cofounders talk about what founding Sun was like [video]
+Social Recommendation Search - Users deciding the search results!
+Why Can't Programmers.. Program?
+Asking All Young Entrepreneurs: Are You Absolutely Sick of College Yet?
+Can VCs tell an A-Team from a B-Team?
+What are the implications of the Conceptual Age for startups?
+The Secret to Utilizing Social Media Sites (like Reddit)
+12 Quick Tips To Search Google Like An Expert
+Larry Page's tips for the entrepreneur (~5 min video)
+An Economic Explanation For Why DRM Cannot Open Up New Business Model Opportunities
+How Steve Jobs prepares for speeches
+Paul Graham is Today's Prius
+Turkey Says 'No More YouTube' (Blocked)
+-----------------------------------
+---------------- 8 ------------------
+Win A Copy Of Yojimbo - a pretty good organizer for the Mac.
+What's good for users is what is good for the business... who knew? 
+Why Good Strategies Fail
+hiring good hackers - joel on software
+A guide to starting your business
+How to name your company
+How to be creative
+Entrepreneurial Thought Leaders Podcast series
+Top Ten Lessons I've Learned About Managing An Online Forum
+Audio of talks by Cal Henderson, Josh Schachter and many others
+TechStars 2007 - Funding program & seminars (similar to YC) in Boulder, CO
+Users Who Know Too Much (e.g. who read the print-friendly version instead)
+Three Hypotheses of Human Interface Design
+Setup a Ubuntu Dev Server (good step-by-step tutorial)
+Yahoo! Earning 5% More With The New Ads System
+Why Valley Vcs are Like the Mob
+Heard of Cebu City, Philippines?
+Om Malik slams the Oscars for their YouTube policy
+A Startup Idea Postmortem: Proof That Good Ideas Aren't Always Good Business
+3 Qualities Of A Good Social Network
+A sociohistorical look at the evolution of Japanese mobile wireless
+Google's Gadget Numbers Revealed - Exposure that a good widgets can get.
+Fail Well
+KlipboardzTV - Social TV and Movies
+Eons ("MySpace for old people") Raises Staggering $22 Million Round
+Google: Not trapping users' data = GOOD
+-----------------------------------
+---------------- 9 ------------------
+Why we made this site
+Please tell us what features you'd like in news.ycombinator
+OpenCoffee Club - regular meeting places where entrepreneurs can meet with investors and other entrepreneurs in an informal setting
+Yahoo only did 3 acquisitions in 2006, for $42m
+For the Uninitiated- When You _Really_ Want to Scale
+Django or Ruby on Rails? -- A Comparison
+DIGG and Reddit Killer from Former Amazon Engineer
+MyBlogLog Case Study: Product progression and the widget
+I'm looking for a partner or two (here are some of my ideas, feel free to add your own here)
+MochiKit.Animator with demos (the end is the best)
+Networking: How do you manage your network and stay in touch with your key contacts?
+F-22 stealth's computers crash at the int'l date line
+TechCrunch: Is Spotplex a better Digg?
+Firefox 3.0 opens door to Web apps, Mozilla says
+I need your advice! Startup Failing. Should I simply release the product?
+Scaling HotOrNot.com
+Making a Wiki with TurboGears (Python)
+Is this idea prone to lawsuits?
+USA Today goes social: lots of complaints in the comments, but it's actually pretty well done
+Programming Language Wars (by Tim O'Reilly)
+Don't Lose Your Visitors: Better 404 Pages
+Uclue--The return of Google Answers (or at least the researchers)
+Web apps with S3 + Rails.  Now your apps have 2x as many buzz words.
+Coincidences that made Google successful
+Want To Win At Blogging? Promote Your Rivals, Say Yale Researchers
+Thoughts on using news.YC (please contribute, please read)
+-----------------------------------
+---------------- 10 ------------------
+Another audience-driven news site that thinks it will win by paying users 
+Log on, drop out, cash in
+still true today, is identity the final frontier?
+Doesn't the Social Web Realize that People Talk?
+Tim Bray: &#34;The buzz around OpenID is becoming impossible to ignore.&#34;
+Ning - Create Your Own Social Network for Anything
+What do you think are the &#34;real&#34; values of the hottest web companies?
+Top 10 States for Entrepreneurs -- The list may be surprising
+The Web's Best Interface Design
+Google: Click Fraud Is 0.02% Of Clicks
+Perhaps Entrepreneurs Can Stay East After All
+iShopr - Part 1 - Screenshots of the real thing
+Startups and the Stockdale Paradox
+The start-up inflection point
+Bebo IPO - Possible?
+California, the Wi-Fi state
+On blog templates: designing is thinking; every detail deserves to be thought about
+Looking for a quick flip? Think again.
+The people who say Web 2.0 apps are garbage are completely right -- and utterly wrong
+(Not) To Do List
+What do you think about Apollo?
+What is the best hacker/entrepreneurial community where you live?
+Successful Companies That Did Without an SQL-based RDBMS?
+How Do You Teach Kids the Value of Money?
+What do you think about looking for a co-founder on Craigslist?
+"God Wrote in Lisp Code" mp3 file.
+-----------------------------------
+---------------- 11 ------------------
+Defiance of the &#34;Venture Capital&#34; Model [video] - Panel with Guy Kawasaki, Fark, Hi5, Suicide Girls, HotOrNot
+Michael Arrington thinks the bbc should be dissolved
+The Paradox of Choice - Why More Is Less
+Bootstrapping Your Company - A practical guide by Greg Gianforte, founder of RightNow Technologies [MP3]
+Under 30, online and world-beating
+Dexter Walks (first dynamically balancing biped robot)
+Have you experienced the customer-investor-team conundrum?
+ShopList - mobile phone shopping list that's actually usable
+Who is your dream investor?
+analytics - build your own or off-the-shelf?
+Web 2.0: Shifting from "Get Fast" to "Get Massive" this
+If you want to be rich, first stop being so frightened
+Peer Review my web app! (See Comment for more info)
+-----------------------------------
+---------------- 12 ------------------
+The Idiot Startup (like the The Daily WTF, but for entrepreneurs rather than programmers)
+Applications open for summer 2007 YC funding
+6 Startup Lessons For The Year 2007
+Quantum computation demystified: Shor's algorithm explained in a way that many people can understand.
+Turning Ideas Into Dollars
+An Ad Upstart Forces Google to Open Up a Little
+Backroom Confessions Of A Marketing Executive
+Venturevoice - podcasts of leading entrepreneurs such as Reid Hoffman, Evan Williams, Fabrice Grinda
+Amazon + Two Guys + $0 = Next YouTube
+How will this software get my users laid?
+-----------------------------------
+---------------- 13 ------------------
+MIT undergrad's reactions to working at a startup
+Sports and In-Game Advertising
+If you are going to launch a startup, how many friends would you need?
+Yahoo Taps Its Inner Startup
+My college professor: "Startups are not real work, and starting a business is not rational."
+The Graphing Calculator Story
+Moonlighter's Dilemma: Guide to Starting a Startup PartTime
+The Joel Test: 12 Steps to Better Code
+Why finding a partner is hard!
+The Entrepreneur Bubble
+Startup founders, how old are you?
+How do you combat "entrepreneur's ADD"?
+What entrepreneurial role are you playing?
+Memo to Startup World: No, MSFT Isn't Buying You
+-----------------------------------
+---------------- 14 ------------------
+Hard disc test surprises Google
+Python Web Framework Discussion (with the project leaders)
+Congrats for the good review, Jessica!
+An OpenID is not an account!
+high traffic rails performance data point (hotspotr.com)
+The best qualities of high- and low-level languages
+Capturing your start-to-be with a wiki
+Social Networking's Next Phase
+Seven ways that companies have built virality
+Techcrunch Destroying Sites on Launch Day
+-----------------------------------
+---------------- 15 ------------------
+Black triangle: a useful shorthand and metaphor
+I Dropped Out of Grad School Today
+Working in France, in the Style of Silicon Valley
+Millions of Videos, and Now a Way to Search Inside Them
+How OkCupid prevents break-ins despite buggy code
+Idea: A Better Social News Site
+What the Web&#39;s most popular sites are running on
+Brutal reality of startup life
+Why great coders get paid far too little
+Threadless and Vimeo fireside chat, part 2
+Stuff To Do - prioritize and share tasks, time tracking (beta)
+YC backed Octopart launches search engine for gadget parts
+Is there a service for testing out how well a domain name might work out in practice?
+Craigslist and why it survived the bubble
+Have any VCs told you "No" already?
+SocialPicks: social stock picks & research
+-----------------------------------
+---------------- 16 ------------------
+Tough AI problem -&#62; game -&#62; surfers will solve for free!
+Friday Code Monkey Song
+Forget VC Money, Fund Yourself
+Example of Lisp Macros
+Top 10 Lies of Venture Capitalists - Guy Kawasaki
+Ycombinator, the inside scoop
+FreeMind -- free mind mapping software
+Successful startup trends: visual content is great but visual interfaces are not?
+Guy Kawasaki on Founders at Work
+Is having cofounder at early stage really that important? 
+y combinator news bookmarklet
+-----------------------------------
+---------------- 17 ------------------
+Startupping - a community for Internet entrepreneurs
+CRV Quickstart:   $250,000 in seed stage financing. How does an 18 year old entrepreneur find references to list on the application?
+Startup School Wiki - Wiki inc videos of startup school 2006 and 2005
+CRV Quickstart Facts: Those are some long odds.
+It's a bad time to start a company
+10 Reasons Why Great Advisors Matter
+A good summary of possible problems with fixed exchange rates (in China).
+Mind Petals archives: hundreds of good startup articles
+101 areas where startups can create value
+"Good to Great" is NOT? The Halo Effect and the Eight Other Business Delusions That Deceive Managers
+Y Combinator Backed Search Engine For Gadget Parts
+Why Niches are Better
+-----------------------------------
+---------------- 18 ------------------
+Startup news link submission site.
+Notes from Del.icio.us founder Joshua Schachter
+11 Reasons Why OpenID Rocks/Sucks
+How to fix Google
+Here's a community for matching angel investors with startup companies - lots of brick & mortar, but maybe useful?
+Inside Myspace.com - (great info on how they scaled)
+Facebook Launches Facebook Query Language
+Marketing TV shows using social media
+news.ycombinator.com Feature Requests
+New YC Startup: Buxfer
+Hedlund's startup ideas: "..find an old UNIX command that hasn't yet been implemented on the web.."
+Quintura launches a new user interface for easy search and browsing the Web
+Skype-cast (voice conference) for the start up community of news.YC
+Is news.YCombinator an interesting test bed for software startup philosophies?
+How to Monetize MySpace
+Making money using open source
+Shaker Design Philosophy - Necessary, Useful, Beautiful
+-----------------------------------
+---------------- 19 ------------------
+From Oxford to Silicon Valley
+Do YOU have the balls to try? Part I
+Seven steps to remarkable customer service
+Getting Real: Free Book by 37signals
+Digg Upgrades Spam Armor, Unblocks Sites
+Can Google Hear Me?
+How to Keep America Competitive by Bill Gates (Current state of affairs with Computer Science and Education)
+Reasons You Should Never Get a Job
+Job satisfaction level hits new low, especially among younger workers
+Why you need a degree to work at Bigco
+Collaborative filtering resources
+Why do you want to pursue a startup?
+Tech lessons learned from the wisdom of crowds
+Question for founders: Do you own your technology?
+Who is your dream co-founder?
+Scribd "YouTube for Text" Gets $300K
+Are you looking for a co-founder? But why do you expect a stranger to take risks with his/her career, make personal sacrifices, and be passionate about *your* idea before fundin

@@ -29,6 +29,7 @@ dataAnalysis/corpus
 dataAnalysis/data
 dataMining/data
 dataMining/*.json
+tensorFlow/data
 data.txt
 dataAnalysis/test.csv
 notes.txt
