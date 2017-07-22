@@ -30,6 +30,7 @@ dataAnalysis/data
 dataMining/data
 dataMining/*.json
 tensorFlow/data
+tensorFlow/*
 data.txt
 dataAnalysis/test.csv
 notes.txt
