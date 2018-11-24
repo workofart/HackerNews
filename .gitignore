@@ -33,7 +33,6 @@ tensorFlow/data
 tensorFlow/*
 data.txt
 dataAnalysis/test.csv
-notes.txt
 
 # Pycharm
 .idea/
