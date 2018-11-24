@@ -10,7 +10,7 @@
 - LDA (Latent Dirichlet Allocation)
 - Custom tokenizer
 - Unsupervised learning
-- 24 topics
+- 25 topics
 - 70000 stories input
 - 242591 unique tokens
 - Removed top 30 most frequent words
@@ -29,9 +29,10 @@ Topics (Personally labeled the topics by the top 20 keywords in each topic):
 - Entertainment
 - Web Infrastructure/Technologies
 - Innovation
+- Programming Language
 - Finance/Stock Market
 - Education
-- Programming
+- Code
 - Security
 - Websites
 - Resource
