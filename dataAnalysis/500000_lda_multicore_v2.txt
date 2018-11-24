@@ -20,13 +20,13 @@ Cluster 9 (Web Infrastructure/Technologies)
 ['data', 'server', 'service', 'network', 'servers', 'api', 'cloud', 'internet', 'google', 'services', 'hosting', 'host', 'bandwidth', 'web', 'run', 'per', 'aws', 'amazon', 'storage', 'running']
 Cluster 10 (Innovation)
 ['musk', 'hyperloop', 'war', 'article', 'world', 'engineering', 'different', 'tube', 'spacex', 'project', 'israel', 'us', 'advice', 'problem', 'idea', 'design', 'made', 'military', 'code', 'north']
-Cluster 11 (Programming)
+Cluster 11 (Programming Languages)
 ['language', 'code', 'java', 'languages', 'python', 'programming', 'go', 'javascript', 'lot', 'write', 'php', 'ruby', 'better', 'web', 'used', 'framework', 'lisp', 'many', 'haskell', 'writing']
 Cluster 12 (Finance/Stock Market)
 ['market', 'microsoft', 'money', 'bitcoin', 'price', 'value', 'buy', 'company', 'product', 'companies', 'products', 'business', 'years', 'apple', 'sell', 'currency', 'many', 'point', 'going', 'stock']
 Cluster 13 (Education)
 ['school', 'job', 'learn', 'years', 'lot', 'many', 'students', 'college', 'better', 'someone', 'working', 'problem', 'experience', 'programming', 'learning', 'going', 'go', 'hard', 'find', 'never']
-Cluster 14 (Programming)
+Cluster 14 (Code)
 ['code', 'pre', 'function', 'lt', 'rust', 'memory', 'example', 'type', 'case', 'data', 'write', 'actually', 'return', 'used', 'read', 'line', 'two', 'error', 'go', 'list']
 Cluster 15 (Security)
 ['security', 'password', 'data', 'email', 'user', 'access', 'key', 'users', 'information', 'address', 'secure', 'account', 'passwords', 'file', 'problem', 'code', 'someone', 'without', 'privacy', 'service']
@@ -46,5 +46,5 @@ Cluster 22 (Politics)
 ['us', 'government', 'law', 'public', 'someone', 'say', 'right', 'point', 'many', 'case', 'person', 'going', 'said', 'thing', 'world', 'information', 'actually', 'legal', 'bad', 'system']
 Cluster 23 (Web)
 ['web', 'app', 'browser', 'page', 'text', 'design', 'firefox', 'chrome', 'site', 'great', 'css', 'html', 'users', 'javascript', 'looks', 'nice', 'emacs', 'user', 'ui', 'version']
-Cluster 24
+Cluster 24 (Job)
 ['software', 'please', 'job', 'remote', 'looking', 'location', 'developer', 'post', 'web', 'development', 'developers', 'experience', 'free', 'team', 'lead', 'learning', 'seeking', 'position', 'may', 'engineer']
