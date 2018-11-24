@@ -1,0 +1,40 @@
+Reddit Supervised Learning Tagging Results
+
+16 Subreddits (handpicked - by posts count in descending order - to be most distinct from each other)
+Economics
+Fitness
+Music
+books
+food
+gaming
+news
+philosophy
+photography
+politics
+programming
+science
+scifi
+sports
+technology
+worldnews
+
+
+---------- Removed stop words & 1 to 3-grams ---------------
+Naive Bayes
+	Size of training set:  785579
+	Size of testing set:  336677
+	0.428214579553
+
+Support Vector Machine (Linear)
+	Size of training set:  785579
+	Size of testing set:  336677
+	0.512330809648
+
+
+Relevant Files:
+dataAnalysis/archive/reddit_main.py -> Naive Bayes and SVM classification pipeline
+dataAnalysis/archive/reddit_preprocess.py -> reads from binary reddit data file, convert it into csv, utility functions for preprocessing
+
+
+Note that since the reddit dataset is too large, the following folder and files aren't part of this repo, please use RC2010-2012 as the data set and run "reddit_preprocess.py" on the unzipped reddit dataset, the corresponding subreddits specified above to reproduce the results
+data/category/*.csv -> each file represents the data used for one subreddit (filename = subreddit name)
